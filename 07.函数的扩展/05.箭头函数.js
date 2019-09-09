@@ -28,4 +28,3 @@ let _getTempItem = id => ({ id: id, name: "Temp" });
 // 如果箭头函数只有一行语句，且不需要返回值，可以采用下面的写法，就不用写大括号了
 
 let fn = () => void doesNotReturn();
-

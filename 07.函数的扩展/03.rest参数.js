@@ -33,7 +33,13 @@ function push(array, ...items) {
 var a = [];
 push(a, '0425', '1009', '0821', '1219');
 console.log(a);
+console.log();
 
 // rest 参数之后不能再有其他参数（即只能是最后一个参数），否则会报错
 
 // 函数的length属性，不包括 rest 参数
+console.log((function(a) {}).length);  // 1
+console.log((function(...a) {}).length); // 0
+console.log((function (a, ...b) {}).length);  // 1
+
+// 只要函数参数使用了默认值、解构赋值、或者扩展运算符，那么函数内部就不能显式设定为严格模式，否则会报错
